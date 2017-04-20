@@ -37,7 +37,7 @@ UserInput: # ask for a zipcode
 SumZipcode:
 RecursiveStep: # recursive call to sum zipcode integers
 	slti	$t0, $s0, 10		#if current number is less than 10
-	bne	$t0, $0, 	#branch to apply the basis step
+	bne	$t0, $0, BasisStep	#branch to apply the basis step
 	
 	addi	$t0, $0, 10		#$t0 = 10
 	div	$s0, $t0		#HI = $s0/10, LO = $s0%10
